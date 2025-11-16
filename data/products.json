@@ -1,0 +1,52 @@
+[
+  {
+    "name": "ecobee Smart Thermostat Premium Plus Pack",
+    "current_price": 249,
+    "target_price": 230
+  },
+  {
+    "name": "LG WM4000HWA + DLEX4000W Washer/Dryer Set",
+    "current_price": 1599,
+    "target_price": 1500
+  },
+  {
+    "name": "TCL 65\" Q77K QLED TV",
+    "current_price": 399,
+    "target_price": 380
+  },
+  {
+    "name": "Dyson Supersonic Hair Dryer",
+    "current_price": 429,
+    "target_price": 350
+  },
+  {
+    "name": "Dyson V10 Animal+ Vacuum",
+    "current_price": 299,
+    "target_price": 250
+  },
+  {
+    "name": "Roborock Q Revo Robot Vacuum/Mop",
+    "current_price": 799,
+    "target_price": 650
+  },
+  {
+    "name": "Roborock F25 Ultra Stick Vacuum",
+    "current_price": 549,
+    "target_price": 400
+  },
+  {
+    "name": "Seagate IronWolf 4TB NAS HDD",
+    "current_price": 84.99,
+    "target_price": 85
+  },
+  {
+    "name": "AOOSTAR GEM12 MAX Mini PC",
+    "current_price": 469,
+    "target_price": 429
+  },
+  {
+    "name": "TerraMaster D4-320 4-bay Enclosure",
+    "current_price": 189.99,
+    "target_price": 170
+  }
+]
