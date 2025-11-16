@@ -1,33 +1,17 @@
+import json
 import os
 import requests
 from datetime import datetime, timezone, timedelta
 from openai import OpenAI
 
+DATA_FILE = "data/products.json"
 
 def get_raw_prices():
     """
-    这里先用写死的数据示例。
-    以后你可以把这里改成：
-    - 从某个 JSON / CSV 读价格
-    - 或者从你自己的接口 / 爬虫拿价格
+    从 JSON 文件加载商品数据。
     """
-    return [
-        {
-            "name": "Seagate IronWolf 4TB NAS HDD",
-            "current_price": 84.99,
-            "target_price": 85.0,
-        },
-        {
-            "name": "AOOSTAR GEM12 MAX Mini PC",
-            "current_price": 469.00,
-            "target_price": 429.0,
-        },
-        {
-            "name": "TerraMaster D4-320 4-bay Enclosure",
-            "current_price": 189.99,
-            "target_price": 170.0,
-        },
-    ]
+    with open(DATA_FILE, "r", encoding="utf-8") as f:
+        return json.load(f)
 
 
 def build_prompt(price_data):
