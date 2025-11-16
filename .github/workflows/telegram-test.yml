@@ -1,0 +1,30 @@
+name: Telegram Test
+
+on:
+  schedule:
+    - cron: "0 14 * * *"   # 每天 14:00 UTC（= 美国东部 09:00）
+  workflow_dispatch:       # 允许你手动点按钮运行
+
+jobs:
+  send-telegram:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: |
+          pip install requests
+
+      - name: Run Telegram script
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: |
+          python scripts/send_telegram.py
